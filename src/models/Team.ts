@@ -10,5 +10,5 @@ export class Team{
     totalPoints: number;
     goalsScored: number;
     goalsConceded: number;
-    goalDiference: number;
+    goalDifference: number;
 }
