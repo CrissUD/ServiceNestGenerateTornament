@@ -7,7 +7,7 @@ export class MatchesController {
     constructor(private readonly matchesService: MatchesService){
 
     }
-
+    
     @Post('/:idTournament')
     createTeam(@Param('idTournament') idTournament) {
         return this.matchesService.createMatches(idTournament)
