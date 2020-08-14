@@ -47,7 +47,7 @@ port: 3000
 
 ## Rutas y envíos
 
-## GenerarTorneo
+## Generar Torneo
 
 ```bash
 post('localhost:3000/tournament')
@@ -66,7 +66,7 @@ body{
 </div>
 
 
-## GenerarEquipo
+## Generar Equipo
 
 ```bash
 post('localhost:3000/team/:idTournament')
@@ -80,17 +80,17 @@ body{
 
 <div align='center'>
     <img  src='https://i.imgur.com/eAF5FuF.png'>
-    <p>Resultado generación torneo.</p>
+    <p>Resultado generación equipo.</p>
 </div>
 
-## GenerarPartidos
+## Generar Partidos
 
 ```bash
 post('localhost:3000/matches/:idTournament')
 ```
 <div align='center'>
     <img  src='https://i.imgur.com/0lKl4qB.png'>
-    <p>Resultado generación torneo.</p>
+    <p>Resultado generación partidos.</p>
 </div>
 
 # Running the app
