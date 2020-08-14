@@ -6,8 +6,10 @@ import { FirebaseService } from './services/firebase/firebase.service';
 export class AppController {
   constructor(private readonly appService: AppService, private readonly firebaseService: FirebaseService) {}
 
-  @Get("api/test")
+  @Get()
   getHello() {
-    return this.firebaseService.getInfo();
+    return this.firebaseService.getInfo()
+      .then(data => data)
+      .catch(error => error);
   }
 }
