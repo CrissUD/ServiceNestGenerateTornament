@@ -13,8 +13,8 @@ firebase.initializeApp({
 export class FirebaseService {
 
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    async pushElement (torneo, url) {
-        return await firebase.database().ref(url).push(torneo);
+    async pushElement (element, url) {
+        return await firebase.database().ref(url).push(element);
     }
 
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
