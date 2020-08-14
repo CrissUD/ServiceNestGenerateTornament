@@ -8,7 +8,9 @@ export class TournamentController {
 
     }
 
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     @Post()
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     createTournament(@Body() tournament) {
         return this.tournamentService.createTournament(tournament)
             .then(data => data)

@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
 import { TeamService } from '../team/team.service';
 import { Match } from '../../models/Match';
-import { match } from 'assert';
 
 @Injectable()
 export class MatchesService {

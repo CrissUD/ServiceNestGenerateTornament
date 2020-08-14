@@ -8,7 +8,9 @@ export class MatchesController {
 
     }
     
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     @Post('/:idTournament')
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     createTeam(@Param('idTournament') idTournament) {
         return this.matchesService.createMatches(idTournament)
             .then(data => data)

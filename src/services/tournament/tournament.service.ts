@@ -8,6 +8,7 @@ export class TournamentService {
 
     }
 
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     async createTournament (torneo) {
         return await this.firebaseService.pushElement(torneo, "/json");
     }
