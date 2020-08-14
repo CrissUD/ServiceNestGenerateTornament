@@ -12,8 +12,14 @@ firebase.initializeApp({
 @Injectable()
 export class FirebaseService {
 
-    async getInfo(){
-        const snapshot = await firebase.database().ref("/json").once('value');
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    async pushElement (element, url) {
+        return await firebase.database().ref(url).push(element);
+    }
+
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    async getElement(url){
+        const snapshot = await firebase.database().ref(url).once('value');
         return snapshot.val(); 
     }
 }
