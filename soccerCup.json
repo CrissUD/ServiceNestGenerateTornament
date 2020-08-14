@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "soccercup-b6117",
+  "private_key_id": "2b62c04f1ce78d4f4928007045a88a2ce356520b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDH02BZoWFC84yG\nIzhVClaYB+6w/pGeiQojWFb6uJrUN3cobCevbGByyj8/ryAPs4epRFeMwu1RmCkA\nxsIPWvIY2t0jXh1fapE9pPxDjZqSOE0taaFrbZBUQt1BL725fcMnC/jQe4KlNHiW\nOqi0f7XjSRsO82Hjf1vRrlM3uANBtGvlKyHxfGcaSQouP7gmBIK+KsXGsl1TyP2J\nY/o42WgdjC1jLIl4qC3Hql4fYWzl/n1/idWbyCwsWsbmdf07R+/ZO6MIiyIL9f/D\nNNPeEey3IGjNQZMW9E6iq/z1t2vTawvHrlxwsuflatGQ2UJCelp+AfrfxJt74Idy\ngJ3MFca7AgMBAAECggEAV2ar+OguO3N9XlpfVEreT0cA7ueZ18bG6WjFOoquJe5Q\nrxyHSyJTGUI+4eL+Wf/DcZTT2lyUIqE0JgPJc5/qzlZEbSjIHijleBoGwKFaH2SC\n1T8jfHKCs2g/kDiKemx4hEanQMEVBp9pswPbMH+/lbcvH53yjefxyEfAXFmfCwhQ\n3r9I93nURy+zXQPoZcxef+9C2Lb7uNSMfpl80hzfbp9LRokfCsog0AevMYyEqrDg\nVrF/wXNuV+SaPB8V0tOvv6wORlY2oYFwcLDw0uF0U4/9O+e828K3gIsfPToIKfpg\n04c3KO3sbUnhR1GGMURBRWRUoXEofsZw1nK/S9IfeQKBgQD/7Zak2AquUkT/4hfy\nxJSJpkncyA7flHDgMCj+0gWRg2WkM65zCOtQeV4mbSsktZU6kIYvmGTvbWM3fwVN\n3DU+SdD30u2ocEoruAkXw+00nDpHzVUFTWu4aXQA7el/6tlCzupESyOWqsUoYbrY\nxdtW5YW8I31lx2CCjtWfVJopXwKBgQDH4cB77n03xsZMCg5y2qpeWPDzo+41/ZI9\n9BJqMPN1DBCRMGHOxuQ1PtxnDcgXqp1fRA3n6egTO6HC5G6fXkYMmNu0rnPpXrol\nD++7vxnSYRLvsae6BpaENTZOtVFKFUoyqLps06oCFTcw+7ldbqGwP4MF9vbJ9w/B\nCxwfQ6m0JQKBgDvcdazu/2iQw6TaXGGjS1767zHd9WSkUtaNTTl1JGpJwp9qmzY6\n8tdq2/O++yVl95awMUK2sX0zJ87WPgZdKHL+Twt4YbBRO3gIXtAZOsVgeV1MEMPh\nvP1wZPrGqyQJaXHv9emtbZCTNvRgD5UeilRD8Uj1QCJrRQ6knCDdaAWfAoGBAMT7\nO8Bm1cxD/mQtfPO/fyqfqEXThgx7KsYXZJZ2S1dMXn9XGOy4oWm/22FL+acpIxIh\ndTraDzX1DIOOr14rgAkmE09KpTyVeAjSXcW+nOnxdMH3aH4xw9/iuPR0R/okZQzr\nr11UczS+R7fkO1dSkdGppawZKDj9W+84zawZ+IJpAoGAYWL1R5wyVSwLe1agpy0N\nHlU8LNKJYSK5NOPo5BPKchVJraNOvHk317ejlA2yVJaznL+nUI0MMHKpIzq2azN2\noWis2atnTkQuhXT8z3cTK3HW2nbwf0UapHlLmsXPVTUbaqD+3qWquvf2CgKXq6le\nXESp4SSopWNN7QqEc1sH/dM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ug2kn@soccercup-b6117.iam.gserviceaccount.com",
+  "client_id": "109948804487080969435",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ug2kn%40soccercup-b6117.iam.gserviceaccount.com"
+}
