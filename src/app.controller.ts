@@ -8,8 +8,6 @@ export class AppController {
 
   @Get()
   getHello() {
-    return this.firebaseService.getInfo()
-      .then(data => data)
-      .catch(error => error);
+    return "hello World";
   }
 }

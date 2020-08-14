@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, HttpModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TournamentController } from './controllers/tournament/tournament.controller';
@@ -10,7 +10,7 @@ import { MatchesController } from './controllers/matches/matches.controller';
 import { MatchesService } from './services/matches/matches.service';
 
 @Module({
-  imports: [],
+  imports: [HttpModule],
   controllers: [AppController,TournamentController, TeamController, MatchesController],
   providers: [AppService, TournamentService, FirebaseService, TeamService, MatchesService],
 })

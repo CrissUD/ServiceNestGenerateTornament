@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
+import { Team } from 'src/models/Team';
 
+let teamObject: Team;
 @Injectable()
 export class TeamService {
 
@@ -8,11 +10,15 @@ export class TeamService {
     
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     async createTeam (team, idTournament) {
-        return await this.firebaseService.pushElement(team, `/json/${idTournament}/teams`);
-    }
-
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    async getTeams (idTournament) {
-        return await this.firebaseService.getElement(`/json/${idTournament}/teams`);
+        teamObject = team;
+        teamObject.gamesPlayed = 0;
+        teamObject.wonMatches = 0;
+        teamObject.lostMatches = 0;
+        teamObject.tiedMatches = 0;
+        teamObject.totalPoints = 0;
+        teamObject.goalsScored = 0;
+        teamObject.goalsConceded = 0;
+        teamObject.goalDifference = 0;
+        return await this.firebaseService.pushElement(teamObject, `/json/${idTournament}/teams`);
     }
 }

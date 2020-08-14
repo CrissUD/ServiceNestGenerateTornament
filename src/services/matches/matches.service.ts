@@ -1,26 +1,27 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpService } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
-import { TeamService } from '../team/team.service';
 import { Match } from '../../models/Match';
 import { Team } from '../../models/Team';
+import { Observable } from 'rxjs';
 
+const URL = 'http://localhost:3005/api/team/';
 @Injectable()
 export class MatchesService {
     
     private keyTeams: string[];
     private nameTeams: string[] = [];
 
-    constructor(private firebaseService : FirebaseService, private teamService : TeamService){
+    constructor(private http: HttpService, private firebaseService : FirebaseService){
 
     }
 
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     async createMatches (idTournament) {
         let match;
-        this.teamService.getTeams(idTournament)
-        .then(data => { 
-            this.keyTeams = Object.keys(data);
-            Object.values(data).map((team: Team) => {
+        this.findTeam(`${URL}${idTournament}`)
+        .subscribe(data => { 
+            this.keyTeams = Object.keys(data.data);
+            Object.values(data.data).map((team: Team) => {
                 this.nameTeams.push(team.name);
             });
             // Generando partidos
@@ -37,8 +38,12 @@ export class MatchesService {
                     this.createMatch(idTournament, match);
                 }
             }
-        })
-        .catch(error => console.log(error));
+        });
+    }
+
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    findTeam(url): Observable<any> {
+        return this.http.get(url);
     }
 
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
