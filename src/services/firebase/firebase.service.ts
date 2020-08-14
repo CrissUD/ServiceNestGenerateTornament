@@ -12,8 +12,12 @@ firebase.initializeApp({
 @Injectable()
 export class FirebaseService {
 
-
     async pushElement (torneo, url) {
         return await firebase.database().ref(url).push(torneo);
+    }
+
+    async getElement(url){
+        const snapshot = await firebase.database().ref(url).once('value');
+        return snapshot.val(); 
     }
 }
