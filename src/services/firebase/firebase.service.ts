@@ -10,4 +10,10 @@ firebase.initializeApp({
 });
 
 @Injectable()
-export class FirebaseService {}
+export class FirebaseService {
+
+    async getInfo(){
+        const snapshot = await firebase.database().ref("/json").once('value');
+        return snapshot.val(); 
+    }
+}
