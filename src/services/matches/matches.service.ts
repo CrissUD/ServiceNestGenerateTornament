@@ -7,7 +7,6 @@ import { Team } from '../../models/Team';
 @Injectable()
 export class MatchesService {
     
-    private matches: Match[] = [];
     private keyTeams: string[];
     private nameTeams: string[] = [];
 
@@ -35,15 +34,17 @@ export class MatchesService {
                     match.isPlayed = false;
                     match.goals_team1 = 0;
                     match.goals_team2 = 0;
-                    console.log(match.id_team1, match.id_team2);
-                    this.matches.push(match);
+                    this.createMatch(idTournament, match);
                 }
             }
-            console.log(this.matches);
-            return this.firebaseService.pushElement(this.matches, `/json/${idTournament}/matches`).then(data => data);
         })
+        .catch(error => console.log(error));
+    }
+
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    async createMatch (idTournament, match) {
+        return this.firebaseService.pushElement(match, `/json/${idTournament}/matches`).then(data => data)
         .then(data => data)
         .catch(error => console.log(error));
-        
     }
 }
