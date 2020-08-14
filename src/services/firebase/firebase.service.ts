@@ -10,4 +10,10 @@ firebase.initializeApp({
 });
 
 @Injectable()
-export class FirebaseService {}
+export class FirebaseService {
+
+
+    async pushElement (torneo, url) {
+        return await firebase.database().ref(url).push(torneo);
+    }
+}
