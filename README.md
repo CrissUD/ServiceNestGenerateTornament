@@ -23,9 +23,14 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Servicio Nest encargado de la generación de entidades y elementos dentro de una **Base de datos no relacional montada en Firebase** que intervienen en la participación de un torneo de fútbol (Cuadrangular).
+Genera:
+* **Información básica de torneos**.
+* **Información básica de equipos**.
+* **Información básica de partidos a disputar**.
+
 
 ## Installation
 
@@ -33,7 +38,62 @@
 $ npm install
 ```
 
-## Running the app
+# Pruebas
+
+## Puerto
+```bash
+port: 3000
+```
+
+## Rutas y envíos
+
+## GenerarTorneo
+
+```bash
+post('localhost:3000/tournament')
+
+body{
+  name: "Premier League",
+  prize: "800000",
+  type: "League",
+  country: "England"
+}
+```
+
+<div align='center'>
+    <img  src='https://i.imgur.com/xCdBzIE.png'>
+    <p>Resultado generación torneo.</p>
+</div>
+
+
+## GenerarEquipo
+
+```bash
+post('localhost:3000/team/:idTournament')
+
+body{
+  coach: "Mikel Arteta",
+  leader: "Mesut Ozil",
+  name: "Arsenal"
+}
+```
+
+<div align='center'>
+    <img  src='https://i.imgur.com/eAF5FuF.png'>
+    <p>Resultado generación torneo.</p>
+</div>
+
+## GenerarPartidos
+
+```bash
+post('localhost:3000/matches/:idTournament')
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/0lKl4qB.png'>
+    <p>Resultado generación torneo.</p>
+</div>
+
+# Running the app
 
 ```bash
 # development
@@ -58,16 +118,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
